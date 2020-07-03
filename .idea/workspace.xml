@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="428c5c19-9811-4fc3-aa22-059fefa51658" name="Default Changelist" comment="" />
+    <list default="true" id="428c5c19-9811-4fc3-aa22-059fefa51658" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_nse.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_nse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nse_last.py" beforeDir="false" afterPath="$PROJECT_DIR$/nse_last.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrap.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,16 +70,16 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="new_nse" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="stk" />
+    <configuration name="new_nse" type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="nse" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/bin/python.app" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_nse.py" />
@@ -84,29 +91,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="nse_download" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="stk" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nse_download.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="nse_last" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="stk" />
+    <configuration name="nse_last" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nse" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -147,20 +133,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nse" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.interview" />
       <item itemvalue="Python.new_nse" />
-      <item itemvalue="Python.nse_download" />
-      <item itemvalue="Python.nse_last" />
       <item itemvalue="Python.scrap" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.nse_last" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.new_nse" />
+        <item itemvalue="Python.nse_last" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.interview" />
         <item itemvalue="Python.scrap" />
-        <item itemvalue="Python.nse_download" />
-        <item itemvalue="Python.nse_last" />
       </list>
     </recent_temporary>
   </component>
@@ -499,13 +506,37 @@
     <option name="LAST_COMMIT_MESSAGE" value="improved DB storing method with &quot;primary key&quot; column added." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="408" y="153" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1587822929019">
+    <state x="408" y="153" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1593679596960">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="408" y="153" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1587822929019" />
+    <state x="408" y="153" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1593679596960" />
+    <state x="406" y="65" key="#new_nse" timestamp="1593761096851">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="406" y="65" key="#new_nse/0.0.1440.900@0.0.1440.900" timestamp="1593761096851" />
+    <state width="1419" height="307" key="GridCell.Tab.0.bottom" timestamp="1593766699525">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="307" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593766699525" />
+    <state width="1419" height="307" key="GridCell.Tab.0.center" timestamp="1593766699523">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="307" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1593766699523" />
+    <state width="1419" height="307" key="GridCell.Tab.0.left" timestamp="1593766699521">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="307" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1593766699521" />
+    <state width="1419" height="307" key="GridCell.Tab.0.right" timestamp="1593766699524">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="307" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1593766699524" />
     <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1589554658877">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1589554658877" />
+    <state x="421" y="176" width="598" height="548" key="find.popup" timestamp="1593757626054">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1593757626054" />
   </component>
 </project>

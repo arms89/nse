@@ -1,43 +1,71 @@
 # Imports
-
-from selenium import webdriver
-import os
+import requests as req
 import pandas as pd
-from datetime import timedelta, date
-from sqlite3 import connect
+from io import StringIO
+
+session = req.session()
+headers = {'Accept': '*/*',
+               'Accept-Encoding': 'gzip, deflate, br',
+               'Accept-Language': 'en-US,en;q=0.9',
+               'Connection': 'keep-alive',
+               'Host': 'www.nseindia.com',
+               'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) '
+                             'AppleWebKit/537.36 (KHTML, like Gecko) '
+                             'Chrome/83.0.4103.116 Safari/537.36'}
+session.headers.update(headers)
+url = 'https://www.nseindia.com/api/historical/cm/equity?' \
+      'symbol=COALINDIA&series=[%22EQ%22]&from=11-01-2019&to=11-01-2020&csv=true'
+data = StringIO(session.get(url).content.decode('utf-8'))
+raw = pd.read_csv(data, sep=',')
+print(raw)
 
 
-class Nse:
-
-    def __init__(self, scrip):
-        self.scrip = scrip
-
-    def setup_driver(self):
-        if os.name == "nt":
-            user_path = os.environ['USERPROFILE']
-            self.driver = webdriver.Chrome(f"{user_path}/OneDrive/garbage/nse/chromedriver.exe")
-
-    def tear_down_driver(self):
-        self.driver.quit()
-
-    def get_database_last_date(self):
-        connection = connect("stocks.db")
-        stock_data = pd.read_sql_query(
-            f"select * from STOCKS where Symbol like '{self.scrip}' order by date desc limit 1",
-            con=connection,
-            parse_dates=['Date'])
-        return date.strftime(stock_data['Date'][0] + pd.DateOffset(days=1), "%Y-%m-%d")
-
-    def get_nse_last_date(self):
-
-        pass
-
-    def download_csv(self, scrip):
-        pass
+def setup_session():
+    pass
 
 
-if __name__ == "__main__":
-    obj = Nse('ZEEL')
-    # obj.setup_driver()
-    # obj.tear_down_driver()
-    print(obj.get_database_last_date())
+def teardown_session():
+    pass
+
+
+def setup_db_connection():
+    pass
+
+
+def teardown_db_connection():
+    pass
+
+
+def fetch_historical(scrip):
+    pass
+
+
+def fetch_current(scrip):
+    pass
+
+
+def get_last_traded_date(scrip):
+    pass
+
+
+def get_db_last_date(scrip):
+    pass
+
+
+def main():
+    setup_session()
+    setup_db_connection()
+    last_traded_date = get_last_traded_date(scrip)
+    db_last_date = get_db_last_date(scrip)
+    if last_traded_date > db_last_date:
+        fetch_current(scrip)
+    elif last_traded_date is None:
+        fetch_historical(scrip)
+    elif last_traded_date == current_date:
+        print("DB already up-to date")
+    teardown_db_connection()
+    teardown_session()
+
+
+if __name__ == '__main__':
+    main()
